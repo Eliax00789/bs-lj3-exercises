@@ -4,16 +4,33 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        DataGenerator dataGeneratorCSV = new DataGeneratorCSV();
-        dataGeneratorCSV.createData(0, 10);
-        dataGeneratorCSV.saveData(new File("dataset.csv"));
+        DataGenerator dataGenerator;
 
-        DataGenerator dataGeneratorJSON = new DataGeneratorJSON();
-        dataGeneratorJSON.createData(0, 10);
-        dataGeneratorJSON.saveData(new File("dataset.json"));
+        while_input:
+        while (true) {
+            System.out.print("Output as csv, json or xml (c, j, x): ");
+            String input = System.console().readLine();
+            switch (input.toLowerCase()) {
+                case "csv", "c":
+                    dataGenerator = new DataGeneratorCSV();
+                    break while_input;
+                case "json", "j":
+                    dataGenerator = new DataGeneratorJSON();
+                    break while_input;
+                case "xml", "x":
+                    dataGenerator = new DataGeneratorXML();
+                    break while_input;
+                default:
+                    System.out.println("Invalid input");
+                    break;
+            }
+        }
 
-        DataGenerator dataGeneratorXML = new DataGeneratorXML();
-        dataGeneratorXML.createData(0, 10);
-        dataGeneratorXML.saveData(new File("dataset.xml"));
+        System.out.print("Output filename: ");
+        String input = System.console().readLine();
+        File outputFile = new File(input);
+
+        dataGenerator.createData(0, 10);
+        dataGenerator.saveData(outputFile);
     }
 }
