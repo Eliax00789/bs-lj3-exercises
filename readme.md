@@ -7,3 +7,5 @@
 - n02_test_data_generator
   - java
   - dart
+- n03_animal_race
+  - java
