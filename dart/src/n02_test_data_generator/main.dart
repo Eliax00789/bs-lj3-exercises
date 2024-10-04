@@ -23,7 +23,7 @@ void main() async {
         dataGenerator = DataGeneratorXML();
         break while_input;
       default:
-        stdout.write('Invalid input\n');
+        print('Invalid input');
         break;
     }
   }
