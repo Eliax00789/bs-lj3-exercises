@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'data_generator.dart';
+import 'data_generator_csv.dart';
+import 'data_generator_json.dart';
+import 'data_generator_xml.dart';
 
 void main() async {
   DataGenerator dataGenerator;

@@ -5,7 +5,8 @@ repository: https://github.com/Eliax00789/bs-lj3-exercises
 environment:
   sdk: ^3.5.2
 
-dependencies: {}
+dependencies:
+  meta: ^1.16.0
 
 dev_dependencies:
   lints: ^4.0.0

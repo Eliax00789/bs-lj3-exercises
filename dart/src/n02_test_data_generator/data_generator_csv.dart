@@ -1,8 +1,10 @@
-part of 'data_generator.dart';
+import 'dart:io';
+
+import 'data_generator.dart';
 
 class DataGeneratorCSV extends DataGenerator {
   @override
   Future<void> saveData(final File file) async {
-    await file.writeAsString('${this._dataSet.join(',')}${Platform.lineTerminator}');
+    await file.writeAsString('${this.dataSet.join(',')}${Platform.lineTerminator}');
   }
 }

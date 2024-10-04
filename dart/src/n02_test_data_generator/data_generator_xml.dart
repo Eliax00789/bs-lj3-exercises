@@ -1,4 +1,6 @@
-part of 'data_generator.dart';
+import 'dart:io';
+
+import 'data_generator.dart';
 
 class DataGeneratorXML extends DataGenerator {
   @override
@@ -8,7 +10,7 @@ class DataGeneratorXML extends DataGenerator {
       ..write(Platform.lineTerminator)
       ..write('<dataSet>')
       ..write(Platform.lineTerminator);
-    for (final double dataPoint in this._dataSet) {
+    for (final double dataPoint in this.dataSet) {
       content
         ..write('\t<dataPoint>')
         ..write(dataPoint)
