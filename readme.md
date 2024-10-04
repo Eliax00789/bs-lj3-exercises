@@ -9,3 +9,4 @@
   - dart
 - n03_animal_race
   - java
+  - dart
