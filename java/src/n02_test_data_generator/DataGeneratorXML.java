@@ -1,4 +1,4 @@
-package n02_testdatengenerator;
+package n02_test_data_generator;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
