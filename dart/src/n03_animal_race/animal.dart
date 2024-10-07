@@ -6,11 +6,16 @@ abstract class Animal {
   final String name;
   final double _minSpeed;
   final double _maxSpeed;
-  final int _stamina;
+  int _stamina;
 
-  double move() => (Random().nextDouble()
-      * (this._maxSpeed - this._minSpeed) + this._minSpeed)
-      * (10 / this._stamina);
+  double move() {
+    if (this._stamina == 0) {
+      return this._minSpeed;
+    } else {
+      this._stamina--;
+      return Random().nextDouble() * (this._maxSpeed - this._minSpeed) + this._minSpeed;
+    }
+  }
 
   void makeNoise();
 }
