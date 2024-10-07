@@ -3,10 +3,10 @@ package n03_animal_race;
 import java.util.Random;
 
 public abstract class Animal {
-    public String name;
-    public float minSpeed;
-    public float maxSpeed;
-    public int stamina;
+    public final String name;
+    private final float minSpeed;
+    private final float maxSpeed;
+    private final int stamina;
 
     public Animal(String name, float minSpeed, float maxSpeed, int stamina) {
         this.name = name;
