@@ -6,7 +6,7 @@ public abstract class Animal {
     public final String name;
     private final float minSpeed;
     private final float maxSpeed;
-    private final int stamina;
+    private int stamina;
 
     public Animal(String name, float minSpeed, float maxSpeed, int stamina) {
         this.name = name;
@@ -16,8 +16,12 @@ public abstract class Animal {
     }
 
     public float move() {
-        return new Random().nextFloat(this.minSpeed, this.maxSpeed)
-                * (10f / this.stamina);
+        if (this.stamina == 0) {
+            return this.minSpeed;
+        } else {
+            this.stamina--;
+            return new Random().nextFloat(this.minSpeed, this.maxSpeed);
+        }
     }
 
     public abstract void makeNoise();
