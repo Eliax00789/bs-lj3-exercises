@@ -1,4 +1,4 @@
-package n03_animal_race;
+package n03_race;
 
 public class Antelope extends Animal {
     public Antelope() {
@@ -8,9 +8,5 @@ public class Antelope extends Animal {
     @Override
     public void makeNoise() {
         System.out.println("snort");
-    }
-
-    public void jump() {
-        System.out.println("yeeeee");
     }
 }

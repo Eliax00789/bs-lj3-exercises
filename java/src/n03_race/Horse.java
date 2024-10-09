@@ -1,4 +1,4 @@
-package n03_animal_race;
+package n03_race;
 
 public class Horse extends Animal {
     public Horse() {
@@ -8,9 +8,5 @@ public class Horse extends Animal {
     @Override
     public void makeNoise() {
         System.out.println("neigh");
-    }
-
-    public void throwRider() {
-        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaa");
     }
 }

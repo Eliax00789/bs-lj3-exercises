@@ -1,8 +1,8 @@
-package n03_animal_race;
+package n03_race;
 
 import java.util.Random;
 
-public abstract class Animal {
+public abstract class Animal implements Movable {
     public final String name;
     private final float minSpeed;
     private final float maxSpeed;

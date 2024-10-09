@@ -1,4 +1,4 @@
-package n03_animal_race;
+package n03_race;
 
 public class Wolf extends Animal {
     public Wolf() {
