@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        DataGenerator dataGenerator;
+        DataGenerator dataGenerator = new DataGenerator();
 
         while_input:
         while (true) {
@@ -12,13 +12,13 @@ public class Main {
             String input = System.console().readLine();
             switch (input.toLowerCase()) {
                 case "csv", "c":
-                    dataGenerator = new DataGeneratorCSV();
+                    dataGenerator.setDataSetSaver(new DataSetSaverCSV());
                     break while_input;
                 case "json", "j":
-                    dataGenerator = new DataGeneratorJSON();
+                    dataGenerator.setDataSetSaver(new DataSetSaverJSON());
                     break while_input;
                 case "xml", "x":
-                    dataGenerator = new DataGeneratorXML();
+                    dataGenerator.setDataSetSaver(new DataSetSaverXML());
                     break while_input;
                 default:
                     System.out.println("Invalid input");

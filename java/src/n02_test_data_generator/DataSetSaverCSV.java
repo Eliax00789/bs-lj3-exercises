@@ -3,13 +3,14 @@ package n02_test_data_generator;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 import java.util.StringJoiner;
 
-public class DataGeneratorCSV extends DataGenerator {
+public class DataSetSaverCSV implements DataSetSaver {
     @Override
-    void saveData(File file) {
+    public void saveData(File file, List<Double> dataSet) {
         StringJoiner content = new StringJoiner(",");
-        for (Double dataPoint : this.dataSet) {
+        for (Double dataPoint : dataSet) {
             content.add(dataPoint.toString());
         }
         try (FileWriter writer = new FileWriter(file)) {

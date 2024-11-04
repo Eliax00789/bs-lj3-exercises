@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public abstract class DataGenerator {
+public class DataGenerator {
     protected List<Double> dataSet = new ArrayList<>();
+    private DataSetSaver saver;
 
     public void createData(double min, double max) {
         Random random = new Random();
@@ -15,5 +16,11 @@ public abstract class DataGenerator {
         }
     }
 
-    abstract void saveData(File file);
+    public void setDataSetSaver(DataSetSaver saver) {
+        this.saver = saver;
+    }
+
+    void saveData(File file) {
+        this.saver.saveData(file, this.dataSet);
+    }
 }

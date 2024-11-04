@@ -3,14 +3,15 @@ package n02_test_data_generator;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
-public class DataGeneratorJSON extends DataGenerator {
+public class DataSetSaverJSON implements DataSetSaver {
     @Override
-    void saveData(File file) {
+    public void saveData(File file, List<Double> dataSet) {
         StringBuilder content = new StringBuilder();
         content.append("[").append(System.lineSeparator());
-        if (!this.dataSet.isEmpty()) {
-            for (Double dataPoint : this.dataSet) {
+        if (!dataSet.isEmpty()) {
+            for (Double dataPoint : dataSet) {
                 content.append("    ").append(dataPoint).append(',').append(System.lineSeparator());
             }
             content.deleteCharAt(content.length() - 2);

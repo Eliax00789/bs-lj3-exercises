@@ -9,10 +9,11 @@ import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.util.List;
 
-public class DataGeneratorXML extends DataGenerator {
+public class DataSetSaverXML implements DataSetSaver {
     @Override
-    void saveData(File file) {
+    public void saveData(File file, List<Double> dataSet) {
         Document document;
         try {
             document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
@@ -21,7 +22,7 @@ public class DataGeneratorXML extends DataGenerator {
         }
 
         Element rootElement = document.createElement("dataSet");
-        for (Double dataPoint : this.dataSet) {
+        for (Double dataPoint : dataSet) {
             Element dataPointElement = document.createElement("dataPoint");
             dataPointElement.appendChild(document.createTextNode(dataPoint.toString()));
             rootElement.appendChild(dataPointElement);
