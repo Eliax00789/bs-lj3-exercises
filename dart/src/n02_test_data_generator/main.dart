@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'data_generator.dart';
-import 'data_generator_csv.dart';
-import 'data_generator_json.dart';
-import 'data_generator_xml.dart';
+import 'data_set_saver_csv.dart';
+import 'data_set_saver_json.dart';
+import 'data_set_saver_xml.dart';
 
 void main() async {
-  DataGenerator dataGenerator;
+  final DataGenerator dataGenerator = DataGenerator();
 
   while_input:
   while (true) {
@@ -15,15 +15,15 @@ void main() async {
     switch (input) {
       case 'csv':
       case 'c':
-        dataGenerator = DataGeneratorCSV();
+        dataGenerator.saver = DataSetSaverCSV();
         break while_input;
       case 'json':
       case 'j':
-        dataGenerator = DataGeneratorJSON();
+        dataGenerator.saver = DataSetSaverJSON();
         break while_input;
       case 'xml':
       case 'x':
-        dataGenerator = DataGeneratorXML();
+        dataGenerator.saver = DataSetSaverXML();
         break while_input;
       default:
         print('Invalid input');

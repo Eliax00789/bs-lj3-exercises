@@ -1,16 +1,16 @@
 import 'dart:io';
 
-import 'data_generator.dart';
+import 'data_set_saver.dart';
 
-class DataGeneratorXML extends DataGenerator {
+class DataSetSaverXML with DataSetSaver {
   @override
-  Future<void> saveData(final File file) async {
+  Future<void> saveData(final File file, final List<double> dataSet) async {
     final StringBuffer content = StringBuffer()
       ..write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
       ..write(Platform.lineTerminator)
       ..write('<dataSet>')
       ..write(Platform.lineTerminator);
-    for (final double dataPoint in this.dataSet) {
+    for (final double dataPoint in dataSet) {
       content
         ..write('\t<dataPoint>')
         ..write(dataPoint)
