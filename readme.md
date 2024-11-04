@@ -10,3 +10,6 @@
 - n03_animal_race
   - java
   - dart
+- n04_observer
+  - java
+
