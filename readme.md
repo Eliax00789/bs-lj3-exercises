@@ -13,3 +13,5 @@
 - n04_observer
   - java
   - dart
+- n05_data_structures
+  - java
