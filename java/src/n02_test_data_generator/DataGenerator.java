@@ -20,7 +20,7 @@ public class DataGenerator {
         this.saver = saver;
     }
 
-    void saveData(File file) {
+    public void saveData(File file) {
         this.saver.saveData(file, this.dataSet);
     }
 }
