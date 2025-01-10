@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<catalog xmlns:foo="http://www.foo.org/" xmlns:bar="http://www.bar.org">
+    <song>
+        <title>Empire Burlesque</title>
+        <artist>Bob Dylan</artist>
+        <country>USA</country>
+        <company>Columbia</company>
+        <price>10.90</price>
+        <year>1985</year>
+    </song>
+    <song>
+        <title>Back in Black</title>
+        <artist>Amy Whinehouse</artist>
+        <country>GBR</country>
+        <company>RCA</company>
+        <price>9.90</price>
+        <year>2005</year>
+    </song>
+    <song>
+        <title>Greatest Hits</title>
+        <artist>Dolly Parton</artist>
+        <country>USA</country>
+        <company>RCA</company>
+        <price>9.90</price>
+        <year>1982</year>
+    </song>
+    <song>
+        <title>Hells Bells</title>
+        <artist>ACDC</artist>
+        <country>USA</country>
+        <company>Sony</company>
+        <price>11.90</price>
+        <year>1977</year>
+    </song>
+</catalog>
