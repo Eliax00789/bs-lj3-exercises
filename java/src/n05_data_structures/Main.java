@@ -95,7 +95,8 @@ public class Main {
             return;
         }
 
-        for (File file : files) {
+        for (Iterator<File> it = Arrays.stream(files).sorted(Comparator.comparing(File::getName)).iterator(); it.hasNext(); ) {
+            File file = it.next();
             if (file.isFile()) {
                 tree.addChild(file.getName());
             } else if (file.isDirectory()) {
